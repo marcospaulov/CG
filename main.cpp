@@ -1,15 +1,6 @@
-//*****************************************************
-//
-// PrimeiroPrograma.cpp
-// Um programa OpenGL simples que abre uma janela GLUT
-// e desenha um triângulo no centro
-//
-// Isabel H. Manssour e Marcelo Cohen
-// Este código acompanha o livro
-// "OpenGL - Uma Abordagem Prática e Objetiva"
-//
-//*****************************************************
+//Marcos Paulo Vimieiro
 
+#include <windows.h>
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
@@ -27,12 +18,13 @@ void Desenha(void)
 	// Define a cor de desenho: preto
 	glColor3f(0,0,0);
 
-	// Desenha um triângulo no centro da janela
-	glBegin(GL_TRIANGLES);
-		glVertex3f(-0.5,-0.5,0);
-		glVertex3f( 0.0, 0.5,0);
-		glVertex3f( 0.5,-0.5,0);
-	glEnd();
+    glBegin(GL_LINE_LOOP);
+        glVertex2f(-0.2, 0.3);
+        glVertex2f(-0.2, 0.0);
+        glVertex2f(0.2, 0.0);
+
+    glEnd();
+
 
 	//Executa os comandos OpenGL
 	glFlush();
